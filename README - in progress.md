@@ -4,3 +4,7 @@ Each program showcases a specific set of fundamental computer science skills, as
 1. CREDIT
 
 A program that uses the Luhn algorithm to validate a credit card and identify the card provider.
+The program will prompt the user to input their credit card number. If it's a valid American Express, MasterCard, or Visa number,
+it will return the correct brand name. If it's not, it will return "INVALID".
+
+2. 
