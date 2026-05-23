@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -7,7 +6,11 @@ int main(void)
 {
 
     // Prompt user for text                                             SOLVED
-    string text = get_string("Text: ");
+    char text[1024];
+    printf("Text: ");
+    fgets(text, sizeof(text), stdin);
+    // Strip trailing newline left by fgets
+    text[strcspn(text, "\n")] = '\0';
 
     // Group characters into full words (count the number of words)     SOLVED
 
@@ -59,8 +62,8 @@ int main(void)
     S = ((float) sentcount / wordcount) * 100;
 
     /*Calculate reading level (OG formula index = 0.0588 * L - 0.296 * S - 15.8),
-    where L is the average number of letters per 100 words in the text,
-    and S is the average number of sentences per 100 words in the text.*/
+     *    where L is the average number of letters per 100 words in the text,
+     *    and S is the average number of sentences per 100 words in the text.*/
 
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int grade = (int) round(index);
@@ -79,3 +82,4 @@ int main(void)
         printf("Grade 16+\n");
     }
 }
+
