@@ -1,9 +1,10 @@
-#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-    long long ccnumber = get_long("What's your credit card number? ");
+    long long ccnumber;
+    printf("What's your credit card number? ");
+    scanf("%lld", &ccnumber);
     printf("%lld\n", ccnumber);
 
     int d0 = ccnumber % 10;        // Get DIGIT 1
