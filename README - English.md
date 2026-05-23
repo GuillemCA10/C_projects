@@ -45,8 +45,10 @@ Usage: ./speller [DICTIONARY] text
 
 COMPILATION
 
+```
 gcc -o credit credit.c
 gcc -o readability readability.c
 gcc -o recover recover.c
 gcc -o runoff runoff.c
 For filter and speller, a Makefile is included, so you should run 'make' from their specific directory.
+```
