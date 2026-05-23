@@ -1,5 +1,3 @@
-// Implements a dictionary's functionality
-
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -17,7 +15,7 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 10007;
+#define N 10007
 
 unsigned int wordcount; // Stores the number of words in the dictionary
 bool loaded = false;    // Registers whether load() returned true or not.
@@ -118,7 +116,7 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    for (int i = 0; i < N; i++)
+    for (unsigned int i = 0; i < N; i++)
     {
         node *cursor = table[i];
 
