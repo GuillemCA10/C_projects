@@ -15,19 +15,19 @@ The program takes an input BMP file and a filter flag, and outputs a new BMP fil
 The available filters are grayscale (-g), sepia (-s), reflection (-r), and blur (-b).
 Usage: ./filter -[flag] infile outfile
 
-3. RECOVER
-
-A program that recovers deleted JPEG files from a raw forensic memory image.
-The program scans the image byte by byte, detects the binary signatures that mark the start of each JPEG file,
-and reconstructs them as separate numbered files (001.jpg, 002.jpg, etc.).
-Usage: ./recover image
-
-4. READABILITY
+3. READABILITY
 
 Readability calculates the approximate reading level of a text using the Coleman-Liau index,
 a formula that calibrates reading difficulty based on parameters like word and sentence length.
 The program will prompt the user to input a text. It counts the letters, words,
 and sentences to compute a grade level, and returns a result such as "Grade 7" or "Grade 16+".
+
+4. RECOVER
+
+A program that recovers deleted JPEG files from a raw forensic memory image.
+The program scans the image byte by byte, detects the binary signatures that mark the start of each JPEG file,
+and reconstructs them as separate numbered files (001.jpg, 002.jpg, etc.).
+Usage: ./recover image
 
 5. RUNOFF
 
